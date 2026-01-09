@@ -1,0 +1,161 @@
+/* HOME SECTION */
+section#home{
+    /* background-image: url('../images/backgrounds/reflection-from-laptop-glasses-d.jpg');
+    background-size: cover;
+    color: var(--secondary-text-color); */
+    opacity: 0;
+    transform: translateY(20px); /* Optional: Add subtle movement */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+section#home.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+#home .wrapper{
+    display:flex;
+}
+#home .wrapper-body{
+    align-self: center;
+}
+#home .full-name p:nth-child(1){
+    font-size:2.5rem;
+    font-family: var(--primary-font);
+}
+#home .full-name span{
+    font-family: var(--secondary-font);
+    font-size: 10rem;
+}
+#home .position-title{
+    font-family:var(--small-text-font);
+    font-weight: 300;
+    font-size: 1.5rem;
+} 
+#home .btn-group{
+    padding-top:10px;
+
+}
+.my-works-btn,
+.download-cv-btn
+{
+    border:1px solid black;
+    padding:8px 15px;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+/* PROJECT SECTION */
+
+#projects .wrapper{
+    padding:20px 50px;
+}
+#projects .wrapper-header{
+    gap:15px;
+}
+#projects .primary-title{
+    font-size: 1rem;
+    border:1px solid black;
+    padding:8px 13px;
+    width:100px;
+    border-radius: 10px;
+    text-align: center;
+}
+#projects .sub-title{
+    padding:15px;
+    font-size:3.5rem;
+}
+
+#projects .wrapper-body{
+    height: 70%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#projects .card-list{
+    gap:5px;
+    
+}
+#projects .card{
+    height:calc(100% - 10%)!important;
+    flex:1 0 200px;
+    transition: flex-basis .5s ease;
+}
+#projects .card:hover{
+    /* min-width: 300px !important; */
+    flex-basis: 300px !important;
+}
+
+/* ABOUT SECTION */
+section#about{
+    height:calc(100% - 150px) !important;
+}
+#about .wrapper{
+    padding-top:30px !important;
+}
+#about  .primary-title{
+    font-size: 1rem;
+    border:1px solid black;
+    padding:8px 13px;
+    width:100px;
+    border-radius: 10px;
+    text-align: center;
+}
+#about .wrapper-body{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+#tech-stacks,
+#educ-background 
+{
+    display:flex;
+    flex-direction: column;
+    padding:20px;
+}
+#tech-stacks > .header ,
+#educ-background > .header
+{
+    padding-bottom: 50px;
+}
+#tech-stacks > .header:nth-child(1) p ,
+#educ-background > .header:nth-child(1) p 
+{
+    font-size:3rem;
+    width:800px;
+}
+#frontend{
+    display:flex;
+    flex-direction: column;
+}
+#frontend ,
+#backend ,
+#others
+.header{
+    font-size:1.5rem;
+    padding-bottom: 10px;
+}
+
+#frontend .card-list,
+#backend .card-list,
+#others .card-list
+{
+    display:flex;
+    gap:20px !important;
+    padding: 0 !important;
+}
+#frontend .stack ,
+#backend .stack ,
+#others .stack
+{
+    padding:5px;
+}
+#stack-image{
+    width:50px;
+    height: 50px;
+}
+#educ-background{
+    display:flex;
+    flex-direction: column;
+}
+
+
+

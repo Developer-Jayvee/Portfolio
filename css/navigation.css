@@ -1,0 +1,49 @@
+
+.navigation{
+    border:1px solid black;
+    margin: 0 !important;
+    width:100% !important;
+    height: 80px !important;
+    display:flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: var(--nav-bg-color);
+    opacity: .8;
+}
+.navigation a , 
+.navigation button {
+    font-family: var(--secondary-font);
+     color:var(--nav-text-color);
+    font-size:1.4rem;
+}
+.navigation a:hover ,
+.navigation button:hover {
+    color: #A78295;
+}
+.navigation-list{
+    align-self: center;
+}
+.navigation-list ul{
+    display: flex;
+    gap:50px;
+}
+.navigation-list li{
+    list-style: none;
+}
+.navigation-list li a{
+    text-decoration: none;
+   
+}
+.contact-me-btn{
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+.contact-me-btn button{
+    border:none;
+    background-color: transparent;
+    padding:15px;
+    cursor: pointer;
+}

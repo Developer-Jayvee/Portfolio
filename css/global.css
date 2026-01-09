@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --primary-font: "Fira Sans", sans-serif;
+    --secondary-font:"Bebas Neue", sans-serif;
+    --small-text-font: "Fira Sans", sans-serif;
+    --primary-text-color:#331D2C;
+    --secondary-text-color:#EFE1D1;
+    --nav-bg-color:#331D2C;
+    --nav-text-color:#EFE1D1;
+}
+*{
+    scroll-behavior: smooth;
+}
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    color: var(--primary-text-color) !important;
+}
+p{
+    padding:0 !important;
+    margin: 0 !important;
+}
+button ,
+a{
+    cursor: pointer;
+    border-radius: 10px;
+    color: black;
+}
+.primary-title,
+button
+{
+    font-family: var(--small-text-font);
+    font-size: 1.1rem;
+}
+section{
+    height: calc(100vh - 80px) !important;
+    padding:0 50px !important;
+    padding-top: 80px !important;
+    font-family: var(--primary-font);
+  
+}
+/* section#home,
+section#about
+{
+    padding-top: 80px !important;
+} */
+.wrapper{
+    width:100%;
+    height: calc(100% - 80px);
+   
+}
+.wrapper-header{
+    display: flex;
+    flex-direction: column;
+    padding:0 20px;
+}
+.wrapper-body{
+    padding:20px 40px;
+}
+.btn-group{
+    display:flex;
+    justify-content: center;
+    gap:10px;
+}
+.card-list{
+    display:flex;
+    flex-wrap: nowrap;
+    padding:0 20px;
+    gap:50px;
+    height: 100% !important;
+    width:100% !important;
+    overflow-x: auto;
+}
+.card{
+    border:1px solid black;
+    /* width:300px; */
+    height: 300px;
+    padding:10px;
+    display:flex;
+    border-radius: 10px;
+    cursor: pointer;
+    /* min-width: 100px !important; */
+}
+.card-footer{
+    align-self: flex-end;
+}
+.card-footer button{
+    padding:1px 6px;
+}
+.scrollable-list{
+    height: calc(80vh - 50px);
+    display: grid;
+    grid-template-columns: auto;
+    row-gap:100px;
+    overflow-y: auto;
+}
+.wire-frame li{
+    position: relative;
+}
+.wire-frame li::before{
+    content: "";
+    left:-12px;
+    top:58px;
+    height: 97%;
+    border:2px solid black;
+    position: absolute;
+}
+.wire-frame li:last-child::before{
+   display: none;
+}
+.frame{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.frame-left > .header p:nth-child(1){
+    font-size: 2.5rem;
+}
+.frame-left > .header p:nth-child(2){
+    font-size: 1.2rem;
+}
+.frame h1{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.frame-right{
+    padding:50px;
+}
+.school-image > img{
+    width:800px;
+    height: 500px;
+    object-fit: cover;
+    object-position: 50px 50px;
+}
