@@ -3,6 +3,7 @@ section#home{
     /* background-image: url('../images/backgrounds/reflection-from-laptop-glasses-d.jpg');
     background-size: cover;
     color: var(--secondary-text-color); */
+     height: calc(100vh - 80px) !important;
     opacity: 0;
     transform: translateY(20px); /* Optional: Add subtle movement */
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -51,6 +52,7 @@ section#home.show {
 }
 #projects .wrapper-header{
     gap:15px;
+    padding-bottom: 60px;
 }
 #projects .primary-title{
     font-size: 1rem;
@@ -73,16 +75,17 @@ section#home.show {
 }
 #projects .card-list{
     gap:5px;
+    padding:30px;
     
 }
 #projects .card{
-    height:calc(100% - 10%)!important;
-    flex:1 0 200px;
+    height:600px;
+    flex:1 0 300px;
     transition: flex-basis .5s ease;
 }
 #projects .card:hover{
     /* min-width: 300px !important; */
-    flex-basis: 300px !important;
+    flex-basis: 400px !important;
 }
 
 /* ABOUT SECTION */
@@ -111,6 +114,7 @@ section#about{
     flex-direction: column;
     padding:20px;
 }
+
 #tech-stacks > .header ,
 #educ-background > .header
 {
@@ -120,7 +124,8 @@ section#about{
 #educ-background > .header:nth-child(1) p 
 {
     font-size:3rem;
-    width:800px;
+    min-width: 80%;
+    max-width: 100%;
 }
 #frontend{
     display:flex;
@@ -139,6 +144,7 @@ section#about{
 #others .card-list
 {
     display:flex;
+    flex-wrap: wrap;
     gap:20px !important;
     padding: 0 !important;
 }

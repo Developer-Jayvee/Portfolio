@@ -1,22 +1,31 @@
 
+
 .navigation{
     border:1px solid black;
-    margin: 0 !important;
-    width:100% !important;
-    height: 80px !important;
+    height: 80px;
     display:flex;
     justify-content: space-between;
     position: fixed;
     top: 0;
+    left:0;
+    right:0;
     z-index: 99;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .8);
     background-color: var(--nav-bg-color);
-    opacity: .8;
+    opacity: .9;
+    transition: height .5s ease-in-out;
+    overflow-y: hidden;
+    /* for responsive menu */
+    /* height: 200px !important; */
 }
 .navigation a , 
 .navigation button {
     font-family: var(--secondary-font);
      color:var(--nav-text-color);
     font-size:1.4rem;
+}
+.navigation li:last-child{
+    display:none;
 }
 .navigation a:hover ,
 .navigation button:hover {
@@ -29,12 +38,18 @@
     display: flex;
     gap:50px;
 }
-.navigation-list li{
+.navigation-list li,
+.responsive-menu li
+{
     list-style: none;
 }
-.navigation-list li a{
+.navigation-list li a ,
+.responsive-menu li a 
+{
     text-decoration: none;
-   
+}
+.responsive-menu{
+    display: none;
 }
 .contact-me-btn{
     display: flex;
@@ -46,4 +61,47 @@
     background-color: transparent;
     padding:15px;
     cursor: pointer;
+}
+
+@media screen and (max-width:900px){
+    .navigation > .navigation-list li:not(:last-child),
+    .contact-me-btn
+    {
+        display: none;
+    }
+    
+    .navigation li:last-child{
+        display: block !important;
+    }
+    .responsive-menu{
+        display: block;
+        width: 100% !important;
+    }
+    .navigation{
+        /* height: 300px !important; */
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .navigation-list{
+        align-self: flex-start;
+        justify-self: center;
+    }
+    .responsive-menu ul{
+        padding:0;
+        margin: 0;
+        padding-top:20px;
+    }
+    .responsive-menu ul li{
+        text-align: center;
+        padding:10px 0;
+        width: 100%;
+        cursor: pointer;
+    }
+    .responsive-menu ul li:hover{
+        background-color: #a7829533;
+        color:red;
+    }
+    .responsive-menu a:hover{
+        color:var(--nav-text-color);
+    }
 }
