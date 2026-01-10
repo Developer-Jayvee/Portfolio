@@ -13,10 +13,9 @@
     scroll-behavior: smooth;
 }
 body{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
     color: var(--primary-text-color) !important;
 }
 p{
@@ -36,8 +35,7 @@ button
     font-size: 1.1rem;
 }
 section{
-    height: calc(100vh - 80px) !important;
-    padding:0 50px !important;
+    /* height: calc(100vh - 80px) !important; */
     padding-top: 80px !important;
     font-family: var(--primary-font);
   
@@ -48,9 +46,9 @@ section#about
     padding-top: 80px !important;
 } */
 .wrapper{
-    width:100%;
+    /* width:100%; */
     height: calc(100% - 80px);
-   
+    padding: 0 30px ;
 }
 .wrapper-header{
     display: flex;
@@ -58,7 +56,8 @@ section#about
     padding:0 20px;
 }
 .wrapper-body{
-    padding:20px 40px;
+    padding:20px 0;
+    position: relative;
 }
 .btn-group{
     display:flex;
@@ -92,19 +91,23 @@ section#about
 }
 .scrollable-list{
     height: calc(80vh - 50px);
+    position: absolute;
+    top:20px;
+    left: 0;
+    right: 0;
     display: grid;
     grid-template-columns: auto;
     row-gap:100px;
-    overflow-y: auto;
+    overflow-y:auto;
 }
 .wire-frame li{
     position: relative;
 }
 .wire-frame li::before{
     content: "";
-    left:-12px;
+    left:-13.2px;
     top:58px;
-    height: 97%;
+    height: 95.6%;
     border:2px solid black;
     position: absolute;
 }
@@ -129,8 +132,13 @@ section#about
     padding:50px;
 }
 .school-image > img{
-    width:800px;
-    height: 500px;
+    width:80%;
     object-fit: cover;
     object-position: 50px 50px;
+}
+@media screen and (max-width:700px) {
+    .school-image > img{
+        min-width: 300px;
+        object-position: 0;
+    }
 }

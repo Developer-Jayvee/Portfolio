@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="./css/navigation.css">
     <link rel="stylesheet" href="./css/sections.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/queries.css">
+
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+
 </head>
 <body>
     <nav>
@@ -30,13 +33,38 @@
                     </li>
                     <li>
                         <a href="#about">
-                          About
+                          About 
                         </a>
+                    </li>
+                    <li id="menu">
+                         <a>
+                             <i class="iconoir-menu"></i>
+                         </a>
                     </li>
                 </ul>
             </div>
             <div class="contact-me-btn">
                 <button type="button">Contact Me</button>
+            </div>
+            <div class="responsive-menu" >
+                <ul>
+                    <li>
+                        <a href="#home">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects">
+                            Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            About 
+                        </a>
+                    </li>
+                </ul>
+                
             </div>
         </div>
     </nav>
@@ -50,7 +78,7 @@
                     </div>
                     <p class="position-title">Full Stack Developer</p>
                     <div class="btn-group">
-                        <a class="my-works-btn">My Works</a>
+                        <a class="my-works-btn" href="#projects">My Works</a>
                         <a class="download-cv-btn" href="./document/Hidlao, Jayvee O - Resume.pdf" download="Hidlao,Jayvee O. - Resume.pdf" target="_blank">Download CV</a>
                     </div>
                 </div>
@@ -64,7 +92,7 @@
                 </div>
                 <div class="wrapper-body">
                     <div class="card-list">
-                        <div class="card">
+                        <div class="card" >
                             <div class="card-footer">
                                 <button>Visit Site</button>
                                 <button>View Github</button>
