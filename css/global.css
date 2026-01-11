@@ -11,12 +11,23 @@
 }
 *{
     scroll-behavior: smooth;
+    
 }
 body{
-    /* box-sizing: border-box; */
+    
     padding: 0;
     margin: 0;
     color: var(--primary-text-color) !important;
+    
+}
+input , 
+textarea,
+label
+{
+    box-sizing: border-box;
+}
+textarea{
+    resize: none !important;
 }
 p{
     padding:0 !important;
@@ -38,6 +49,7 @@ section{
     /* height: calc(100vh - 80px) !important; */
     padding-top: 80px !important;
     font-family: var(--primary-font);
+    position: relative;
   
 }
 /* section#home,
@@ -47,17 +59,17 @@ section#about
 } */
 .wrapper{
     /* width:100%; */
-    height: calc(100% - 80px);
     padding: 0 30px ;
 }
 .wrapper-header{
     display: flex;
     flex-direction: column;
     padding:0 20px;
+    padding-bottom: 40px;
 }
 .wrapper-body{
     padding:20px 0;
-    position: relative;
+
 }
 .btn-group{
     display:flex;
@@ -91,10 +103,6 @@ section#about
 }
 .scrollable-list{
     height: calc(80vh - 50px);
-    position: absolute;
-    top:20px;
-    left: 0;
-    right: 0;
     display: grid;
     grid-template-columns: auto;
     row-gap:100px;
@@ -119,10 +127,10 @@ section#about
     grid-template-columns: 40% 60%;
 }
 .frame-left > .header p:nth-child(1){
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem , 2vw , 2.5rem);
 }
 .frame-left > .header p:nth-child(2){
-    font-size: 1.2rem;
+    font-size: clamp(1.2rem , 2vw , 1.2rem);
 }
 .frame h1{
     padding-bottom: 0;
@@ -138,7 +146,7 @@ section#about
 }
 @media screen and (max-width:700px) {
     .school-image > img{
-        min-width: 300px;
+        min-width: 10px;
         object-position: 0;
     }
 }
