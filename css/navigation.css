@@ -56,10 +56,10 @@
     align-items: center;
     padding: 0 40px;
 }
-.contact-me-btn button{
+.contact-me-btn a{
     border:none;
     background-color: transparent;
-    padding:15px;
+    text-decoration: none;
     cursor: pointer;
 }
 @media screen and (max-width:900px){
