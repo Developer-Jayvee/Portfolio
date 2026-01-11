@@ -21,13 +21,17 @@ observer.observe(homeElement);
 
 menu.addEventListener('click', function(e){
     let navHeight = navigation.clientHeight;
-  
-    navigation.style.height = navHeight === 80 ? "260px" : "80px";
+    navigation.style.height = navHeight === 80 ? "280px" : "80px";
 });
-
 main.addEventListener('click',function() {
      let navHeight = navigation.clientHeight;
     if(navHeight !== 80){
         navigation.style.height = "80px";
     }
 });
+window.addEventListener('resize',function(){
+    let navHeight = navigation.clientHeight;
+    if(this.window.innerWidth > 900){
+        navigation.style.height = "80px";
+    }
+})

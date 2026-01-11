@@ -3,7 +3,7 @@ section#home{
     /* background-image: url('../images/backgrounds/reflection-from-laptop-glasses-d.jpg');
     background-size: cover;
     color: var(--secondary-text-color); */
-     height: calc(100vh - 80px) !important;
+    height: calc(100vh - 80px) !important;
     opacity: 0;
     transform: translateY(20px); /* Optional: Add subtle movement */
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -14,17 +14,19 @@ section#home.show {
 }
 #home .wrapper{
     display:flex;
+    align-items: center;
+    height: 100% !important;
 }
 #home .wrapper-body{
     align-self: center;
 }
 #home .full-name p:nth-child(1){
-    font-size:2.5rem;
+    font-size:clamp(2.5rem,3vw,3.5rem);
     font-family: var(--primary-font);
 }
 #home .full-name span{
     font-family: var(--secondary-font);
-    font-size: 10rem;
+    font-size: clamp(8rem,10vw,10rem);
 }
 #home .position-title{
     font-family:var(--small-text-font);
@@ -46,7 +48,6 @@ section#home.show {
 
 
 /* PROJECT SECTION */
-
 #projects .wrapper{
     padding:20px 50px;
 }
@@ -62,13 +63,14 @@ section#home.show {
     border-radius: 10px;
     text-align: center;
 }
-#projects .sub-title{
+.sub-title{
     padding:15px;
-    font-size:3.5rem;
+    font-size: clamp(2.5rem,3.5vw,3.5rem);
+    font-family: var(--primary-font) !important;
 }
 
 #projects .wrapper-body{
-    height: 70%;
+    height: 100%;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -76,22 +78,19 @@ section#home.show {
 #projects .card-list{
     gap:5px;
     padding:30px;
+    overflow: auto !important;
     
 }
 #projects .card{
-    height:600px;
-    flex:1 0 300px;
+    flex:1 0 clamp(150px , 5vw , 250px);
     transition: flex-basis .5s ease;
 }
 #projects .card:hover{
     /* min-width: 300px !important; */
-    flex-basis: 400px !important;
+    flex-basis: clamp(160px , 5.5vw , 255px) !important;
 }
 
 /* ABOUT SECTION */
-section#about{
-    height:calc(100% - 150px) !important;
-}
 #about .wrapper{
     padding-top:30px !important;
 }
@@ -123,7 +122,8 @@ section#about{
 #tech-stacks > .header:nth-child(1) p ,
 #educ-background > .header:nth-child(1) p 
 {
-    font-size:3rem;
+    font-size:clamp(2rem , 3vw , 3.5rem);
+    font-family: var(--primary-font) !important;
     min-width: 80%;
     max-width: 100%;
 }
@@ -161,6 +161,55 @@ section#about{
 #educ-background{
     display:flex;
     flex-direction: column;
+}
+
+/* CONNECT */
+#connect .wrapper-body{
+    display:flex;
+    gap:20px;
+    flex-wrap: wrap;
+}
+#connect .wrapper-body > div{
+    flex: 1 0 0;
+}
+.contact-details p > i{
+    font-size:1.2rem;
+}
+.contact-details p > i::before{
+    content:"";
+    font-size: var(--small-text-font) !important;
+    vertical-align: middle;
+    display: inline-block;
+}
+.contact-details{
+    align-self: center;
+}
+
+.form-field .form > div {
+    padding:10px;
+}
+.form-field {
+    min-width: 50%;
+    max-width: 100%;
+
+}
+.wrapper-field label,
+.wrapper-field input,
+.wrapper-field textarea
+{
+    display: block;
+    width:100%;
+    padding:10px;
+}
+.wrapper-field label{
+    padding:10px 0 !important;
+}
+.email-send{
+    float: right;
+}
+.email-send button{
+    border-radius: 5px !important;
+    padding:10px;
 }
 
 

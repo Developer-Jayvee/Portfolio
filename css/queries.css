@@ -13,10 +13,18 @@
     }
     #projects .card-list{
         flex-wrap: wrap;    
+        height: 500px !important;
     }
     .frame{
         display: grid;
         grid-template-columns: auto;
     }
  
+}
+@media screen and (max-width:700px) {
+    footer{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }

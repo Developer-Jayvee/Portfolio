@@ -62,7 +62,6 @@
     padding:15px;
     cursor: pointer;
 }
-
 @media screen and (max-width:900px){
     .navigation > .navigation-list li:not(:last-child),
     .contact-me-btn
