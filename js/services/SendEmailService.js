@@ -1,7 +1,8 @@
-import { SEND_API } from "../../constants/domains";
+
 const emailForm = document.getElementById('emailForm');
 let sendEmailBtn = document.getElementById('sendEmailBtn');
 
+const SEND_API = "https://portfolio-be-production-778b.up.railway.app";
 
 async function sendEmail(form_data) {
     sendEmailBtn.setAttribute('disabled',true);
