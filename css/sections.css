@@ -168,10 +168,12 @@ section#home.show {
     display:flex;
     gap:20px;
     flex-wrap: wrap;
-    padding:100px;
 }
 #connect .wrapper-body > div{
     flex: 1 0 0;
+}
+.contact-details p {
+    padding: 8px 0 !important;
 }
 .contact-details p > i{
     font-size:1.2rem;
@@ -207,6 +209,7 @@ section#home.show {
 }
 .email-send{
     float: right;
+    padding: 15px 0;
 }
 .email-send button{
     border-radius: 5px !important;
