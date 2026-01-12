@@ -8,7 +8,7 @@ async function sendEmail(form_data) {
     sendEmailBtn.innerText = 'Loading...';
     sendEmailBtn.classList.add('not-allowed');
     try {
-        const { data } = await axios.post(SEND_API + '/api/send-mail',form_data);
+        const { data } = await axios.post(SEND_API + '/api/send-email',form_data);
         if(data){
             sendEmailBtn.setAttribute('disabled',false);
         }
