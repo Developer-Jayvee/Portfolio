@@ -144,6 +144,9 @@ section#about
     object-fit: cover;
     object-position: 50px 50px;
 }
+.not-allowed{
+    cursor: not-allowed;
+}
 @media screen and (max-width:700px) {
     .school-image > img{
         min-width: 10px;
