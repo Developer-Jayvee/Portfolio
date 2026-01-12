@@ -16,6 +16,8 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </head>
 
 <body>
@@ -269,22 +271,24 @@
                     <div class="wrapper-body">
                         <div class="form-field">
                             <div class="form">
-                                <div class="wrapper-field">
-                                    <label for="email">
-                                        Email
-                                    </label>
-                                    <input type="text" placeholder="Email" name="email">
-                                </div>
-                                <div class="wrapper-field">
-                                    <label for="message">
-                                        Message
-                                    </label>
-                                    <textarea name="message" cols="10" rows="10" placeholder="Message for us.."></textarea>
-                                </div>
-                                <div class="email-send">
-                                    <button> Send Email </button>
-                                </div>
-                            </div>
+                                <form method="POST" id="emailForm" role="form">
+                                    <div class="wrapper-field">
+                                        <label for="email">
+                                            Email
+                                        </label>
+                                        <input type="text" placeholder="Email" id="email">
+                                        </div>
+                                        <div class="wrapper-field">
+                                            <label for="message">
+                                                Message
+                                            </label>
+                                            <textarea id="message" cols="10" rows="10" placeholder="Message for us.."></textarea>
+                                        </div>
+                                        <div class="email-send">
+                                            <button id="sendEmailBtn"> Send Email </button>
+                                        </div>
+                                    </div>
+                                </form>
                         </div>
                         <div class="contact-details">
                             <p>
@@ -325,6 +329,7 @@
         </div>
     </footer>
     <script src="./js/styling.js"></script>
+    <script src="./js/services/SendEmailService.js"></script>
 </body>
 
 </html>
