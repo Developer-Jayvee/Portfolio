@@ -110,10 +110,14 @@ section#about
 }
 .wire-frame li{
     position: relative;
+   list-style: none;
+}
+.wire-frame ul{
+    
 }
 .wire-frame li::before{
     content: "";
-    left:-13.2px;
+    left:-11px;
     top:58px;
     height: 95.6%;
     border:2px solid black;
