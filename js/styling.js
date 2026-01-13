@@ -2,14 +2,16 @@ const homeElement = document.getElementById('home');
 const menu = document.getElementById('menu');
 const navigation = document.querySelector('.navigation')
 const main  = document.querySelector('main')
-
+const hiddenElements = document.querySelectorAll('.hide-opacity');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         
         if (entry.isIntersecting) {
-            entry.target.classList.add('show');
+            entry.target.classList.add('show-opacity');
+            entry.target.classList.remove('hide-opacity');
         } else {
-            entry.target.classList.remove('show');
+           entry.target.classList.remove('show-opacity');
+            entry.target.classList.add('hide-opacity');
         }
     });
 }, {
@@ -17,7 +19,11 @@ const observer = new IntersectionObserver((entries) => {
     rootMargin: '0px 0px -50px 0px' // Trigger 50px before element reaches viewport
 });
 
-observer.observe(homeElement);
+hiddenElements.forEach( el => {
+    observer.observe(el);
+    
+})
+
 
 menu.addEventListener('click', function(e){
     let navHeight = navigation.clientHeight;

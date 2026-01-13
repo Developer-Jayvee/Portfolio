@@ -4,13 +4,6 @@ section#home{
     background-size: cover;
     color: var(--secondary-text-color); */
     height: calc(100vh - 80px) !important;
-    opacity: 0;
-    transform: translateY(20px); /* Optional: Add subtle movement */
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-section#home.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 #home .wrapper{
     display:flex;
@@ -62,6 +55,7 @@ section#home.show {
     width:100px;
     border-radius: 10px;
     text-align: center;
+  
 }
 .sub-title{
     padding:15px;
@@ -101,6 +95,7 @@ section#home.show {
     width:100px;
     border-radius: 10px;
     text-align: center;
+    transition: var(--opacity-transition);
 }
 #about .wrapper-body{
     padding-left: 0 !important;

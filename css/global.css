@@ -8,6 +8,7 @@
     --secondary-text-color:#EFE1D1;
     --nav-bg-color:#331D2C;
     --nav-text-color:#EFE1D1;
+    --opacity-transition:opacity .5s ease-in;
 }
 *{
     scroll-behavior: smooth;
@@ -50,7 +51,11 @@ section{
     padding-top: 80px !important;
     font-family: var(--primary-font);
     position: relative;
-  
+    transform: translateY(70px); /* Optional: Add subtle movement */
+    transition: var(--opacity-transition), transform 0.5s ease;
+}
+section.show-opacity{
+    transform: translateY(0);
 }
 /* section#home,
 section#about
@@ -112,9 +117,6 @@ section#about
     position: relative;
    list-style: none;
 }
-.wire-frame ul{
-    
-}
 .wire-frame li::before{
     content: "";
     left:-11px;
@@ -150,6 +152,12 @@ section#about
 }
 .not-allowed{
     cursor: not-allowed;
+}
+.hide-opacity{
+    opacity: 0;
+}
+.show-opacity{
+    opacity: 1;
 }
 @media screen and (max-width:700px) {
     .school-image > img{
