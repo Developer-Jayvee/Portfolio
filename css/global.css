@@ -19,7 +19,7 @@ body{
     padding: 0;
     margin: 0;
     color: var(--primary-text-color) !important;
-    
+  
 }
 input , 
 textarea,
@@ -46,7 +46,13 @@ button
     font-family: var(--small-text-font);
     font-size: 1.1rem;
 }
+main{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* Enforce snapping along the y-axis */
+    scroll-behavior: smooth;
+}
 section{
+    scroll-snap-align: start;
     /* height: calc(100vh - 80px) !important; */
     padding-top: 80px !important;
     font-family: var(--primary-font);
