@@ -42,7 +42,7 @@ section#home{
 
 /* PROJECT SECTION */
 #projects .wrapper{
-    padding:20px 50px;
+    padding:20px 0;
 }
 #projects .wrapper-header{
     gap:15px;
@@ -69,10 +69,9 @@ section#home{
     align-items: center;
     justify-content: center;
 }
-#projects .card-list{
+/* #projects .card-list{
     gap:5px;
     padding:30px;
-    overflow: auto !important;
     
 }
 #projects .card{
@@ -80,13 +79,15 @@ section#home{
     transition: flex-basis .5s ease;
 }
 #projects .card:hover{
-    /* min-width: 300px !important; */
     flex-basis: clamp(160px , 5.5vw , 255px) !important;
-}
+} */
 
 /* ABOUT SECTION */
 #about .wrapper{
     padding-top:30px !important;
+}
+#about .wrapper-header{
+    padding-bottom: 0 !important;
 }
 #about  .primary-title{
     font-size: 1rem;
