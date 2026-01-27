@@ -107,11 +107,12 @@ section#about
     padding:1px 6px;
 }
 .scrollable-list{
-    height: calc(80vh - 50px);
+    height:100%;
+    /* height: calc(80vh - 50px); */
     display: grid;
     grid-template-columns: auto;
     row-gap:100px;
-    overflow-y:auto;
+    /* overflow-y:auto; */
 }
 .wire-frame li{
     position: relative;
